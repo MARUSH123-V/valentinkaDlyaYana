@@ -22,3 +22,43 @@ body {
     max-width: 500px; 
     height: auto; 
 }
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 20px;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.side img {
+  width: 120px;
+}
+
+.container {
+  text-align: center;
+}
+
+.gif_container img {
+  max-width: 400px;
+  width: 100%;
+}
+.side img {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+@media (max-width: 768px) {
+  .side {
+    display: none;
+  }
+}
